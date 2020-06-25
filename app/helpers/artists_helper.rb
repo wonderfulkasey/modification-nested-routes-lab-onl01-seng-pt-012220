@@ -10,12 +10,12 @@ module ArtistsHelper
         select_tag "song[artist_id]", options_from_collection_for_select(Artist.all, :id, :name)
       end
     end
-  
+
     # Display name if editing through nested
     def display_name(song, path)
       if song.artist && path == "nested"
         song.artist.name
       end
     end
-  
+
 end
